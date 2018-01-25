@@ -10,10 +10,6 @@ import org.opencv.objdetect.CascadeClassifier;
 
 public class FaceDetector {
 
-	public static void main(String[] args) {
-		detectFace("C:\\Users\\User\\Desktop\\a.png");
-	}
-
 	public static String detectFace(String inputFile) {
 		try {
 			nu.pattern.OpenCV.loadShared();
@@ -23,7 +19,7 @@ public class FaceDetector {
 			System.out.println("\nRunning FaceDetector");
 
 			CascadeClassifier faceDetector = new CascadeClassifier(
-					"C:\\Users\\User\\Desktop\\neural network\\java work\\face detection\\knowledge\\haarcascade_frontalface_alt.xml");
+					"knowledge\\haarcascade_frontalface_alt.xml");
 
 			Mat image = Highgui.imread(inputFile);
 
